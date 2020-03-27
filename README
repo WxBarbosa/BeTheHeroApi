@@ -1,0 +1,2 @@
+"Criação": npx knex migrate:make create_ongs
+"Executar": npx knex migrate:latest
