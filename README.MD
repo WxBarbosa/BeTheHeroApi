@@ -59,7 +59,7 @@ Observação: Atualmente existe um db.sqlite disponível na pasta database com e
 
 ## 💻 Rotas API
 
-* Incidentes *
+Incidentes
 - Rota: /incidents/index;
   - Query-Param: `page=`;
   - Json: `incidents`;
@@ -71,19 +71,19 @@ Observação: Atualmente existe um db.sqlite disponível na pasta database com e
   - Params: `id`;
   - Authorization: `headers.authorization`;
 
-* Ong *
+Ong
 - Rota: /ongs/index;
   - Json: `ongs`;
 - Rota: /ongs/create;
   - Body: `name, email, whatsapp, city, uf`;
   - Json: `id`;
 
-* Profile *
+Profile
 - Rota: /profile/index;
   - Authorization: `headers.authorization`;
   - Json: `incidents`;
 
-* Sessions *
+Sessions
 - Rota: /sessions/create;
   - Body: `id`;
   - Json: `ong`;
