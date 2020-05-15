@@ -56,3 +56,34 @@ Executar migrations utilizando KNEX(se necessário):
 - "Executar": npx knex migrate:latest
 
 Observação: Atualmente existe um db.sqlite disponível na pasta database com esta estrutura pronta para uso!
+
+## 💻 Rotas API
+
+* Incidentes *
+- Rota: /incidents/index;
+  - Query-Param: `page=`;
+  - Json: `incidents`;
+- Rota: /incidents/create;
+  - Body: `title, description, value`;
+  - Authorization: `headers.authorization`;
+  - Json: `id`;
+- Rota: /incidents/delete;
+  - Params: `id`;
+  - Authorization: `headers.authorization`;
+
+* Ong *
+- Rota: /ongs/index;
+  - Json: `ongs`;
+- Rota: /ongs/create;
+  - Body: `name, email, whatsapp, city, uf`;
+  - Json: `id`;
+
+* Profile *
+- Rota: /profile/index;
+  - Authorization: `headers.authorization`;
+  - Json: `incidents`;
+
+* Sessions *
+- Rota: /sessions/create;
+  - Body: `id`;
+  - Json: `ong`;
